@@ -1,0 +1,43 @@
+[project]
+name = "into-obj"
+version = "0.1.0"
+description = "Rust-style `Into` & `TryInto` conversions for Python"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Sequence", email = "3863887959@qq.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "rezult>=0.2.0",
+]
+
+keywords = ["rust", "rs", "convertions", "cast", "type", "into"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Utilities",
+    "Typing :: Typed"
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
